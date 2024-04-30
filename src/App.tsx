@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {MouseEvent} from 'react';
 import './App.css';
 import {Header} from './site/Header';
 import {Body} from './site/Body';
 import {Footer} from './site/Footer';
 import {NewComponent} from './NewComponent';
+import {log} from 'node:util';
+import {Button} from './components/Button';
 
 function App() {
     const students = [
@@ -20,9 +22,13 @@ function App() {
         {id: 11, name: 'Christopher', age: 100},
     ]
 
+    const clickLog = () => {
+        console.log('I am stupid button')
+    }
     return (
         <>
-            <NewComponent students={students}/>
+            <Button name={'Stupid'} callBack={clickLog}/>
+
         </>
 
     );
