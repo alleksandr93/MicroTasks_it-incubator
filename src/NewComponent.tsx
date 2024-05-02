@@ -1,39 +1,36 @@
-type NewComponentType = {
-    students: StudentType[]
+import {Button} from './components/Button';
+import React from 'react';
+import {FilterType} from './App';
+
+type ComponentPropsType = {
+    money: Array<MoneyPropsType>
+    onClickFilterHandler:(nameButton: FilterType)=>void
 }
-type StudentType = {
-    id: number
-    name: string
-    age: number
+type MoneyPropsType = {
+    banknots: string
+    value: number
+    number: string
 }
 
-export const NewComponent = (props: NewComponentType) => {
-    const topCars = [
-        {manufacturer: 'BMW', model: 'm5cs'},
-        {manufacturer: 'Mercedes', model: 'e63s'},
-        {manufacturer: 'Audi', model: 'rs6'}
-    ]
-
+export const NewComponent = (props: ComponentPropsType) => {
     return (
-        <table>
-            {topCars.map((el, index) => {
-                return (
-                    <>
-                        <tr>
-                            <th>id</th>
-                            <th>manufacturer</th>
-                            <th>model</th>
-                        </tr>
-                        <tr>
-                            <td>{index+1}</td>
-                            <td>{el.manufacturer}</td>
-                            <td>{el.model}</td>
-                        </tr>
-                    </>
+        <>
+            <ul>
+                {props.money.map((el, index) => {
+                    return <li key={index + 1}>
+                        <span>{el.banknots} </span>
+                        <span>{el.value}</span>
+                        <span>{el.number}</span>
+                    </li>
+                })}
+            </ul>
+            <div style={{marginLeft: '35px'}}>
+                <Button name={'all'} callBack={() => props.onClickFilterHandler('all')}/>
+                <Button name={'ruble'} callBack={() => props.onClickFilterHandler('ruble')}/>
+                <Button name={'dollar'} callBack={() => props.onClickFilterHandler('dollar')}/>
+            </div>
 
-                )
-            })}
-        </table>
+        </>
     )
 
 }
