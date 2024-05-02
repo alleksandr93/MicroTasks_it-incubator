@@ -1,4 +1,4 @@
-import React, {MouseEvent} from 'react';
+import React, {MouseEvent, useState} from 'react';
 import './App.css';
 import {Header} from './site/Header';
 import {Body} from './site/Body';
@@ -8,27 +8,18 @@ import {log} from 'node:util';
 import {Button} from './components/Button';
 
 function App() {
-    const students = [
-        {id: 1, name: 'James', age: 8},
-        {id: 2, name: 'Robert', age: 18},
-        {id: 3, name: 'John', age: 28},
-        {id: 4, name: 'Michael', age: 38},
-        {id: 5, name: 'William', age: 48},
-        {id: 6, name: 'David', age: 58},
-        {id: 7, name: 'Richard', age: 68},
-        {id: 8, name: 'Joseph', age: 78},
-        {id: 9, name: 'Thomas', age: 88},
-        {id: 10, name: 'Charles', age: 98},
-        {id: 11, name: 'Christopher', age: 100},
-    ]
-
-    const clickLog = () => {
-        console.log('I am stupid button')
+    let [a, setA] = useState(1)
+    const onClickHandler = () => {
+        setA(++a)
+    }
+    const onClickResetHamdler = () => {
+        setA(a = 0)
     }
     return (
         <>
-            <Button name={'Stupid'} callBack={clickLog}/>
-
+            <h1>{a}</h1>
+            <button onClick={onClickHandler}>number</button>
+            <button onClick={onClickResetHamdler}>0</button>
         </>
 
     );
