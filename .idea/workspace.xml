@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76aa285c-56ff-4627-bdf1-0f681bd3421f" name="Changes" comment="Learn useState">
+    <list default="true" id="76aa285c-56ff-4627-bdf1-0f681bd3421f" name="Changes" comment="Learn method filter">
+      <change afterPath="$PROJECT_DIR$/src/components/FullInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NewComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,9 @@
       <workItem from="1714632756746" duration="1189000" />
       <workItem from="1714646177828" duration="3201000" />
       <workItem from="1714649397683" duration="231000" />
-      <workItem from="1714649637644" duration="1818000" />
+      <workItem from="1714649637644" duration="1965000" />
+      <workItem from="1714698762556" duration="2941000" />
+      <workItem from="1714702600325" duration="4856000" />
     </task>
     <task id="LOCAL-00001" summary="Вложенные компоненты">
       <option name="closed" value="true" />
@@ -114,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714633933148</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Learn method filter">
+      <option name="closed" value="true" />
+      <created>1714651557981</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714651557981</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +139,7 @@
     <MESSAGE value="method map" />
     <MESSAGE value="universal button" />
     <MESSAGE value="Learn useState" />
-    <option name="LAST_COMMIT_MESSAGE" value="Learn useState" />
+    <MESSAGE value="Learn method filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learn method filter" />
   </component>
 </project>

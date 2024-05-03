@@ -3,38 +3,37 @@ import './App.css';
 import {Header} from './site/Header';
 import {Body} from './site/Body';
 import {Footer} from './site/Footer';
-import {NewComponent} from './NewComponent';
 import {log} from 'node:util';
 import {Button} from './components/Button';
+import {FullInput} from './components/FullInput';
+import {Input} from './components/Input';
 
 export type FilterType = 'all' | 'ruble' | 'dollar'
 
 function App() {
-    const [money, setMoney] = useState([
-        {banknots: 'Dollars', value: 100, number: ' a1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' z1234567890'},
-        {banknots: 'RUBLES', value: 100, number: ' w1234567890'},
-        {banknots: 'Dollars', value: 100, number: ' e1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' c1234567890'},
-        {banknots: 'RUBLES', value: 100, number: ' r1234567890'},
-        {banknots: 'Dollars', value: 50, number: ' x1234567890'},
-        {banknots: 'RUBLES', value: 50, number: ' v1234567890'},
+    const [message, setMessage] = useState([
+        {message: 'message1'},
+        {message: 'message2'},
+        {message: 'message3'},
     ])
-
-    const [filter, setFilter] = useState<FilterType>('all')
-    let  currentMoney = money
-    if (filter === 'ruble'){
-        currentMoney = money.filter(el=>el.banknots === 'RUBLES')
-    } else if (filter === 'dollar') {
-        currentMoney = money.filter(el=>el.banknots === 'Dollars')
+    const [title, setTitle] = useState('')
+    const addMessage = () => {
+        setMessage([{message: title}, ...message])
+        setTitle('')
     }
-    const onClickFilterHandler = (nameButton: FilterType) => {
-        setFilter(nameButton)
-    }
-
 
     return (
-        <NewComponent money={currentMoney} onClickFilterHandler={onClickFilterHandler}/>
+        <div className={'App'}>
+            {/*<FullInput addMessage={addMessage}/>*/}
+            <div className={'InputButton'}>
+                <Input value={title} setTitle={setTitle} addMessage={addMessage}/>
+                <Button name={'+'} callBack={addMessage}/>
+            </div>
+
+            {message.map((el, index) => {
+                return <div key={index}>{el.message}</div>
+            })}
+        </div>
     );
 }
 
