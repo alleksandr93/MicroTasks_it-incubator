@@ -1,21 +1,15 @@
 {
   "files": {
-    "main.css": "/MicroTasks_it-incubator/static/css/main.3d6feb48.css",
-    "main.js": "/MicroTasks_it-incubator/static/js/main.7cfcafe6.js",
+    "main.css": "/MicroTasks_it-incubator/static/css/main.e6c13ad2.css",
+    "main.js": "/MicroTasks_it-incubator/static/js/main.5d712ce1.js",
     "static/js/453.1fa133fc.chunk.js": "/MicroTasks_it-incubator/static/js/453.1fa133fc.chunk.js",
-    "static/media/model_1.png": "/MicroTasks_it-incubator/static/media/model_1.f6c7eaa99df98ceec203.png",
-    "static/media/model_2.png": "/MicroTasks_it-incubator/static/media/model_2.6825e3e62db60ed0d14d.png",
-    "static/media/model_3.jpg": "/MicroTasks_it-incubator/static/media/model_3.0622fb606dcbf6038908.jpg",
-    "static/media/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp": "/MicroTasks_it-incubator/static/media/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.4c2aceb4853292b5eab9.webp",
-    "static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp": "/MicroTasks_it-incubator/static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.b43badfb5bc18129337b.webp",
-    "static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp": "/MicroTasks_it-incubator/static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.bfcb34a2e48044d7f26f.webp",
     "index.html": "/MicroTasks_it-incubator/index.html",
-    "main.3d6feb48.css.map": "/MicroTasks_it-incubator/static/css/main.3d6feb48.css.map",
-    "main.7cfcafe6.js.map": "/MicroTasks_it-incubator/static/js/main.7cfcafe6.js.map",
+    "main.e6c13ad2.css.map": "/MicroTasks_it-incubator/static/css/main.e6c13ad2.css.map",
+    "main.5d712ce1.js.map": "/MicroTasks_it-incubator/static/js/main.5d712ce1.js.map",
     "453.1fa133fc.chunk.js.map": "/MicroTasks_it-incubator/static/js/453.1fa133fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d6feb48.css",
-    "static/js/main.7cfcafe6.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5d712ce1.js"
   ]
 }
