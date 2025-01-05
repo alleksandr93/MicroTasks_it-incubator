@@ -1,98 +1,61 @@
-import React, {useState} from 'react';
-import './App.css';
-import {Todolist} from './Todolist';
-import {v1} from 'uuid';
+import React from 'react';
+import {NavLink, Outlet} from 'react-router-dom';
+import {Body, Content, Footer, Header, Nav, NavWrapper} from './components/pages/_styles';
 
-export type todolistsType = {
-    id: string
-    title: string
-    filter: FilterValuesType
+const PATH={
+    PageOne:'/adidas',
+    PageTwo:'/puma',
+    PageThree:'/abibas',
+    PageModeleAdidas:'/adidas/:id',
+    PageModelePuma:'/puma/:id',
+    PagePrice:'/prices',
+    ERROR404:'/error404'
+}as const;
+export type SnickersItem = {
+    id:string
+    model: string;
+    collection: string;
+    price: string;
+    picture: string;
 }
-export type FilterValuesType = 'all' | 'active' | 'completed';
 
 function App() {
 
-    // let [tasks, setTasks] = useState([
-    //     {id: v1(), title: "HTML&CSS", isDone: true},
-    //     {id: v1(), title: "JS", isDone: true},
-    //     {id: v1(), title: "ReactJS", isDone: false},
-    //     {id: v1(), title: "Rest API", isDone: false},
-    //     {id: v1(), title: "GraphQL", isDone: false},
-    // ]);
-    // let [filter, setFilter] = useState<FilterValuesType>("all");
-
-    let todolistID1 = v1();
-    let todolistID2 = v1();
-
-    let [todolists, setTodolists] = useState<Array<todolistsType>>([
-        {id: todolistID1, title: 'What to learn', filter: 'all'},
-        {id: todolistID2, title: 'What to buy', filter: 'all'},
-    ])
-
-    let [tasks, setTasks] = useState({
-        [todolistID1]: [
-            {id: v1(), title: 'HTML&CSS', isDone: true},
-            {id: v1(), title: 'JS', isDone: true},
-            {id: v1(), title: 'ReactJS', isDone: false},
-            {id: v1(), title: 'Rest API', isDone: false},
-            {id: v1(), title: 'GraphQL', isDone: false},
-        ],
-        [todolistID2]: [
-            {id: v1(), title: 'HTML&CSS2', isDone: true},
-            {id: v1(), title: 'JS2', isDone: true},
-            {id: v1(), title: 'ReactJS2', isDone: false},
-            {id: v1(), title: 'Rest API2', isDone: false},
-            {id: v1(), title: 'GraphQL2', isDone: false},
-        ]
-    });
-
-    function removeTask(id: string,todolistId:string) {
-        //tasks[todolistId].filter()
-        // let filteredTasks = tasks[todolistId].filter(t=>t.id !== id)
-        setTasks({...tasks,[todolistId]: tasks[todolistId].filter(t => t.id !== id)});
-    }
-    function addTask(todolistId:string,title: string) {
-        let newTask = {id: v1(), title: title, isDone: false};
-        setTasks({[todolistId]:[...tasks[todolistId],newTask],...tasks});
-    }
-    function changeStatus(todolistId:string,taskId: string, isDone: boolean) {
-        // let task = tasks[todolistId].find(t => t.id === taskId);
-        // if (task) {
-        //     task.isDone = isDone;
-        // }
-        //
-        // setTasks({...tasks});
-        let task = tasks[todolistId].map(el=>el.id===taskId ? {...el,isDone}:el)
-        setTasks({...tasks,[todolistId]:task})
-    }
-    function changeFilter(value: FilterValuesType, todolistId: string) {
-        setTodolists(todolists.map(el => el.id === todolistId ? {...el, filter: value} : el))
-    }
-
     return (
-        <div className="App">
-            {todolists.map(mapTodolist => {
-                let tasksForTodolist = tasks[mapTodolist.id]
-                if (mapTodolist.filter === 'active') {
-                    tasksForTodolist = tasks[mapTodolist.id].filter(t => !t.isDone);
-                }
-                if (mapTodolist.filter === 'completed') {
-                    tasksForTodolist = tasks[mapTodolist.id].filter(t => t.isDone);
-                }
-                return <Todolist key={mapTodolist.id}
-                                 title={mapTodolist.title}
-                                 tasks={tasksForTodolist}
-                                 removeTask={removeTask}
-                                 changeFilter={changeFilter}
-                                 addTask={addTask}
-                                 changeTaskStatus={changeStatus}
-                                 filter={mapTodolist.filter}
-                                 todlistId={mapTodolist.id}/>
-            })}
+        <div>
+            <Header><h1>HEADER</h1></Header>
+            <Body>
+                <Nav>
+                    <NavWrapper><NavLink  to={PATH.PageOne}>Adidas</NavLink></NavWrapper>
+                    <NavWrapper><NavLink  to={PATH.PageTwo}>Puma</NavLink></NavWrapper>
+                    <NavWrapper><NavLink  to={PATH.PageThree}>Abibas</NavLink></NavWrapper>
+                    <NavWrapper><NavLink  to={PATH.PagePrice}>Цены для оптовиков</NavLink></NavWrapper>
+                </Nav>
+                <Content>
+                    <Outlet/>
+                    {/*<Routes>*/}
+                    {/*    <Route path="/" element={<Navigate to={PATH.PageOne}/>}/>*/}
 
+                    {/*    <Route path={PATH.PageOne} element={<Adidas/>}/>*/}
+                    {/*    <Route path={PATH.PageTwo} element={<Puma/>}/>*/}
+                    {/*    <Route path={PATH.PageThree} element={<Abibas/>}/>*/}
+                    {/*    <Route path={'/adidas/:id/:module'} element={<Model />}/>*/}
+                    {/*    <Route path={'/puma/:id/:module'} element={<Model />}/>*/}
+                    {/*    <Route path={PATH.PagePrice} element={<Prices />}/>*/}
+
+
+                    {/*    <Route path="/*" element={<Error404/>}/>*/}
+                    {/*    /!*<Route path="/puma/*" element={<ModelError/>}/>*!/*/}
+
+
+                    {/*</Routes>*/}
+
+                </Content>
+            </Body>
+            <Footer>abibas 2023</Footer>
         </div>
-    )
-        ;
+    );
 }
+
 
 export default App;
