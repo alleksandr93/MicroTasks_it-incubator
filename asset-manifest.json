@@ -1,21 +1,15 @@
 {
   "files": {
-    "main.css": "/shop-test/static/css/main.3d6feb48.css",
-    "main.js": "/shop-test/static/js/main.2916a06d.js",
+    "main.css": "/shop-test/static/css/main.e6c13ad2.css",
+    "main.js": "/shop-test/static/js/main.67187ffa.js",
     "static/js/453.1fa133fc.chunk.js": "/shop-test/static/js/453.1fa133fc.chunk.js",
-    "static/media/model_1.png": "/shop-test/static/media/model_1.f6c7eaa99df98ceec203.png",
-    "static/media/model_2.png": "/shop-test/static/media/model_2.6825e3e62db60ed0d14d.png",
-    "static/media/model_3.jpg": "/shop-test/static/media/model_3.0622fb606dcbf6038908.jpg",
-    "static/media/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.webp": "/shop-test/static/media/PostMove_Mid_Cloudfoam_Super_Lifestyle_Basketball_Mid_Classic_Shoes_Black_GY7163_01_standard.4c2aceb4853292b5eab9.webp",
-    "static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.webp": "/shop-test/static/media/AdiFOM_TRXN_Shoes_Black_IG7453_01_standard.b43badfb5bc18129337b.webp",
-    "static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.webp": "/shop-test/static/media/Superstar_XLG_Shoes_Black_IG9777_01_standard.bfcb34a2e48044d7f26f.webp",
     "index.html": "/shop-test/index.html",
-    "main.3d6feb48.css.map": "/shop-test/static/css/main.3d6feb48.css.map",
-    "main.2916a06d.js.map": "/shop-test/static/js/main.2916a06d.js.map",
+    "main.e6c13ad2.css.map": "/shop-test/static/css/main.e6c13ad2.css.map",
+    "main.67187ffa.js.map": "/shop-test/static/js/main.67187ffa.js.map",
     "453.1fa133fc.chunk.js.map": "/shop-test/static/js/453.1fa133fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d6feb48.css",
-    "static/js/main.2916a06d.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.67187ffa.js"
   ]
 }
