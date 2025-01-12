@@ -20,7 +20,7 @@ export const Model = () => {
     } else {
         model = null
     }
-
+    console.log(model)
 
     return <div style={{
         display: 'flex',

@@ -1,15 +1,15 @@
 import React from 'react';
-import {NavLink, Outlet} from 'react-router-dom';
+import {NavLink, Outlet, Route, Routes} from 'react-router-dom';
 import {Body, Content, Footer, Header, Nav, NavWrapper} from './components/pages/_styles';
+import ProtectedPage from './components/pages/ProtectedPage';
 
 const PATH={
     PageOne:'/adidas',
     PageTwo:'/puma',
     PageThree:'/abibas',
-    PageModeleAdidas:'/adidas/:id',
-    PageModelePuma:'/puma/:id',
     PagePrice:'/prices',
-    ERROR404:'/error404'
+    ERROR404:'/error404',
+    PROTECTEDPAGE:'/protectedPage',
 }as const;
 export type SnickersItem = {
     id:string
@@ -20,7 +20,7 @@ export type SnickersItem = {
 }
 
 function App() {
-
+//todo не правельный путь
     return (
         <div>
             <Header><h1>HEADER</h1></Header>
@@ -30,25 +30,25 @@ function App() {
                     <NavWrapper><NavLink  to={PATH.PageTwo}>Puma</NavLink></NavWrapper>
                     <NavWrapper><NavLink  to={PATH.PageThree}>Abibas</NavLink></NavWrapper>
                     <NavWrapper><NavLink  to={PATH.PagePrice}>Цены для оптовиков</NavLink></NavWrapper>
+                    <NavWrapper><NavLink to={PATH.PROTECTEDPAGE}>Protected Page</NavLink></NavWrapper>
                 </Nav>
                 <Content>
                     <Outlet/>
-                    {/*<Routes>*/}
-                    {/*    <Route path="/" element={<Navigate to={PATH.PageOne}/>}/>*/}
+                    {/* <Routes>
+                   <Route path="/" element={<Navigate to={PATH.PageOne}/>}/>
 
-                    {/*    <Route path={PATH.PageOne} element={<Adidas/>}/>*/}
-                    {/*    <Route path={PATH.PageTwo} element={<Puma/>}/>*/}
-                    {/*    <Route path={PATH.PageThree} element={<Abibas/>}/>*/}
-                    {/*    <Route path={'/adidas/:id/:module'} element={<Model />}/>*/}
-                    {/*    <Route path={'/puma/:id/:module'} element={<Model />}/>*/}
-                    {/*    <Route path={PATH.PagePrice} element={<Prices />}/>*/}
-
-
-                    {/*    <Route path="/*" element={<Error404/>}/>*/}
-                    {/*    /!*<Route path="/puma/*" element={<ModelError/>}/>*!/*/}
+                 <Route path={PATH.PageOne} element={<Adidas/>}/>
+                  <Route path={PATH.PageTwo} element={<Puma/>}/>
+                  <Route path={PATH.PageThree} element={<Abibas/>}/>
+                   <Route path={'/adidas/:id/:module'} element={<Model />}/>
+                 <Route path={PATH.PagePrice} element={<Prices />}/>
 
 
-                    {/*</Routes>*/}
+                   <Route path="/*" element={<Error404/>}/>
+               /!*<Route path="/puma/*" element={<ModelError/>}/>
+
+
+                 </Routes> */}
 
                 </Content>
             </Body>
